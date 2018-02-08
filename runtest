@@ -1,0 +1,6 @@
+#!/usr/bin/ksh
+
+terminal=$(termid INT)
+banner -c# -f2 ${terminal?}
+exec rftest -x ${terminal?} -s -A -vINT -L -R runnum -frf_detail.%20d%s -c100 -d60%20,20%60,5%200,15%400 -D -T${terminal?}
+
